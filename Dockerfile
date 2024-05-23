@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 LABEL maintainer="ryd3v <hello@ryd3v.com>"
 
-# Install essential packages
+# Install essential packages and setup user
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         curl \
@@ -13,7 +13,6 @@ RUN apt-get update && \
         nano \
         sudo && \
     locale-gen en_US.UTF-8 && \
-    # Add and configure user
     adduser --quiet --disabled-password --shell /bin/bash --home /home/ryd3v --gecos "User" ryd3v && \
     echo "ryd3v ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ryd3v && \
     chmod 0440 /etc/sudoers.d/ryd3v && \
