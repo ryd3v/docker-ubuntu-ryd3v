@@ -1,3 +1,7 @@
+# Ryan Collins 2024
+# Ubuntu Development Container
+# See README.md for instructions
+
 FROM ubuntu:latest
 LABEL maintainer="ryd3v <hello@ryd3v.com>"
 
@@ -22,6 +26,3 @@ RUN apt-get update && \
 ENV TERM xterm
 USER ryd3v
 CMD ["bash"]
-
-# build: docker build -f .\Dockerfile -t ubuntu:ryd3v .
-# run: docker run -it -v ${PWD}:/mnt ubuntu:ryd3v 
