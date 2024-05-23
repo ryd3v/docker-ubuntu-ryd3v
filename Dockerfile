@@ -15,6 +15,7 @@ RUN apt-get update && \
         python3 \
         wget \
         nano \
+        build-essential \
         sudo && \
     locale-gen en_US.UTF-8 && \
     adduser --quiet --disabled-password --shell /bin/bash --home /home/ryd3v --gecos "User" ryd3v && \
