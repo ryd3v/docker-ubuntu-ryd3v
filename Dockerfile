@@ -21,8 +21,7 @@ RUN apt-get update && \
     adduser --quiet --disabled-password --shell /bin/bash --home /home/ryd3v --gecos "User" ryd3v && \
     echo "ryd3v ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ryd3v && \
     chmod 0440 /etc/sudoers.d/ryd3v && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENV TERM xterm
 USER ryd3v

@@ -1,7 +1,14 @@
-version: '1'
+version: '3.8'
+
 services:
-  myservice:
+  dev-container:
     build:
-      context: /Dockerfile
+      context: .
       dockerfile: Dockerfile
-    image: result/latest
+    image: ryd3v/dev-container:latest
+    container_name: dev-box
+    environment:
+      - TERM=xterm
+    volumes:
+      - ./src:/home/ryd3v/src
+    tty: true
